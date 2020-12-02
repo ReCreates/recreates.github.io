@@ -1,4 +1,5 @@
-﻿.btn-keynum {
+﻿@charset "utf-8";
+.btn-key {
     width: 60px;
     height: 60px;
     font-size: 30px;
@@ -7,22 +8,28 @@
     outline:none;
     cursor:crosshair;
 }
-#div1 {
+.btn {
+    font-size: 30px;
+    margin:5px;
+}
+#div-keypad {
     background-color: gray;
     border-style: outset;
-    position:absolute;
-    top:0px;
-    left:0px;
+    margin: 20px auto;
+    padding: 20px;
+}
+#div-keycmd {
+    min-width:350px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#header {
+    min-width: 350px;
     margin: 20px;
     padding: 20px;
 }
-#wrap {
-    margin: 20px;
-    padding: 20px;
-    height:340px;
-    position:relative;
-}
-#cmd {
-    margin-left: 20px;
-    margin-right: 20px;
+#text {
+    text-align:center;
+    font-size:30px;
 }

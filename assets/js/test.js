@@ -1,11 +1,11 @@
 // JavaScript source code
-const div1 = document.getElementById("div1");
+const div1 = document.getElementById("div-keypad");
 for (let i = 0; i < 3; i++) {
     const newDiv = document.createElement("div");
     newDiv.id = "div2";
     for (let j = 0; j < 3; j++) {
         const newBtn = document.createElement("button");
-        newBtn.className = "btn-keynum";
+        newBtn.className = "btn-key";
         newBtn.innerHTML = i * 3 + j + 1;
         newDiv.appendChild(newBtn);
     }
@@ -13,22 +13,23 @@ for (let i = 0; i < 3; i++) {
 }
 
 $(function () {
-    var btn = $(".btn-keynum");
-    var div1 = $("#div1");
+    var btn = $(".btn-key");
+    var keypad = $("#div-keypad");
+    var text = $("#text").text();
 
-    div1.css({
+    keypad.css({
         "width": btn.outerWidth() * 3,
         "height": btn.outerHeight() * 3
     });
-    /*
-    div1.mouseover(function () {
+
+    keypad.mouseleave(function () {
         btn.css({
             "outline": "none",
             "border-style": "outset",
             "background-color": "seagreen"
         });
     });
-    */
+    
     btn.click(function () {
         btn.css({
             "border-style": "outset",
@@ -38,7 +39,7 @@ $(function () {
             "border-style":"inset",
             "background-color": "cadetblue"
         });
-        $("#text").text($(this).text());
+        $("#text").text(text+$(this).text());
 
     });
     $("#btn-small").click(function () {
@@ -47,10 +48,13 @@ $(function () {
             "height": "30px",
             "font-size": "15px"
         });
-        $("#div1").css({
+        keypad.css({
             "width": btn.outerWidth() * 3,
             "height": btn.outerHeight() * 3,
             "padding": "10px"
+        });
+        $("p, button").css({
+            "font-size": "15px"
         });
     });
     $("#btn-medium").click(function () {
@@ -59,11 +63,14 @@ $(function () {
             "height": "",
             "font-size": "",
         });
-        $("#div1").css({
+        keypad.css({
             "width": btn.outerWidth() * 3,
             "height": btn.outerHeight() * 3,
             "padding": ""
         });
+        $("p, button").css({
+            "font-size": "30px"
+        })
     });
     $("#btn-large").click(function () {
         btn.css({
@@ -71,11 +78,14 @@ $(function () {
             "height": "90px",
             "font-size": "45px"
         });
-        $("#div1").css({
+        keypad.css({
             "width": btn.outerWidth() * 3,
             "height": btn.outerHeight() * 3,
             "padding": "30px"
         });
+        $("p, button").css({
+            "font-size": "45px"
+        })
     });
     $("#btn-fadeout").click(function () {
         btn.fadeOut();
