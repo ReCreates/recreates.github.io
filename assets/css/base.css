@@ -1,0 +1,28 @@
+﻿.btn-keynum {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    background-color:seagreen;
+    border-style:outset;
+    outline:none;
+    cursor:crosshair;
+}
+#div1 {
+    background-color: gray;
+    border-style: outset;
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin: 20px;
+    padding: 20px;
+}
+#wrap {
+    margin: 20px;
+    padding: 20px;
+    height:340px;
+    position:relative;
+}
+#cmd {
+    margin-left: 20px;
+    margin-right: 20px;
+}

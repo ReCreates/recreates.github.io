@@ -10,37 +10,24 @@
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 -->
         <title>ReCreate:HomePage</title>
-<!--
-        <link href="base.css" type="text/css" rel="stylesheet">
+
         <base href="https://recreates.github.io/" target="_blank">
--->
-        <link rel ="icon" href="https://recreates.github.io/favicon.ico">
-        <style>
-            button{
-                width:50px;
-                height:50px;
-            }
-        </style>
+        <link rel="stylesheet" href="assets/css/base.css" type="text/css">
+        <link rel ="icon" href="assets/images/favicon.ico">
+        <script src="assets/js/jquery-3.5.1.min.js"></script>
     </head>
     <body>
-        <div id="div1"></div>
-
-        <script language="javascript" type="text/javascript">
-            const div1 = document.getElementById("div1");
-
-            for (let i = 0; i < 3; i++) {
-                const newDiv = document.createElement("div");
-                for (let j = 0; j < 3; j++) {
-                    const newBtn = document.createElement("button");
-                    newBtn.innerHTML = i * 3 + j + 1;
-
-                    newBtn.onclick = () => {
-                        console.log(`ボタン${newBtn.innerHTML}が押されました！`);
-                    }
-                    newDiv.appendChild(newBtn);
-                }
-                div1.appendChild(newDiv);
-            }
-        </script>
+        <div id="wrap">
+            <div id="div1"></div>
+        </div>
+        <div id="cmd">
+            <button class="btn-resize" id="btn-small">小</button>
+            <button class="btn-resize" id="btn-medium">中</button>
+            <button class="btn-resize" id="btn-large">大</button>
+            <button id="btn-fadeout">fadeout</button>
+            <button id="btn-fadein">fadein</button>
+        </div>
+        <p id="text">string</p>
+        <script src="assets/js/test.js"></script>
     </body>
 </html>
